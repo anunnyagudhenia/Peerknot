@@ -1,5 +1,6 @@
 import React from "react";
 import {PermMedia,Label,Room,EmojiEmotions} from "@material-ui/icons";
+import { Users } from "../../dummyData";
 import "./share.css";
 
 function Share() {
@@ -7,7 +8,7 @@ function Share() {
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfileImg" src="/assets/person/1.jpeg" alt="" />
+          <img className="shareProfileImg" src={Users[0].profilePicture} alt="" />
           <input
             type="text"
             className="shareInput"

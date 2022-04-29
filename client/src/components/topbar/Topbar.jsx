@@ -33,7 +33,7 @@ function Topbar() {
           </div>
         </div>
       </div>
-      <img src="/assets/person/1.jpeg" alt="image" className="topbarImg"/>
+      <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
     </div>
   )
 }

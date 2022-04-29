@@ -3,6 +3,7 @@ import Topbar from "../../components/topbar/Topbar";
 import Feed from "../../components/feed/Feed";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Rightbar from "../../components/rightbar/Rightbar";
+import { User1, Users } from "../../dummyData";
 import "./profile.css";
 
 function Profile() {
@@ -20,13 +21,13 @@ function Profile() {
                 className="profileCoverImg"
               />
               <img
-                src="assets/person/7.jpeg"
+                src={User1[0].profilePicture}
                 alt=""
                 className="profileUserImg"
               />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">Jayesh</h4>
+              <h4 className="profileInfoName">{User1[0].username}</h4>
               <span className="profileInfoDesc">Welcome</span>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import "./post.css";
 import { useState } from "react";
-import {Users} from "../../dummyData";
+// import {Users} from "../../dummyData";
 import { MoreVert } from "@material-ui/icons";
 
 function Post({ post }) {
@@ -22,7 +22,7 @@ function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img src={post.photo} className="postProfileImg" />
+            <img src={post.profilePicture} className="postProfileImg" alt=""/>
             <span className="postUsername">{post.name}</span>
             <span className="postDate">{post.date}</span>
           </div>
