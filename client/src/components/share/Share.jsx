@@ -4,11 +4,13 @@ import { Users } from "../../dummyData";
 import "./share.css";
 
 function Share() {
+
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfileImg" src={Users[0].profilePicture} alt="" />
+          <img className="shareProfileImg" src={PF+Users[0].profilePicture} alt="" />
           <input
             type="text"
             className="shareInput"

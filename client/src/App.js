@@ -5,24 +5,20 @@ import Register from './components/register/Register'
 import Home from './pages/home/Home'
 import {
   BrowserRouter as Router,
+  Routes,
   Route,
 } from "react-router-dom";
+
 // import {Person} from "@material-ui/icons";
 function App() {
   return (
     <Router>
-        <Route path="/">
-          <Home/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <Route path="/register">
-          <Register/>
-        </Route>
-        <Route path="/profile/:username">
-          <Profile/>
-        </Route>
+      <Routes>
+        <Route path='/' element = {<Home/>}/>
+        <Route path='/profile' element = {<Profile/>}/>
+        <Route path='/login' element = {<Login/>}/>
+        <Route path='/register' element = {<Register/>}/>
+      </Routes>
     </Router>
   )
 }

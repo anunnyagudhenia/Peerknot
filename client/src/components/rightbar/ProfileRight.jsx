@@ -2,6 +2,8 @@ import {Users} from "../../dummyData";
 import "./rightbar.css";
 
 const ProfileRight = () => {
+  
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <>
       <>
@@ -30,7 +32,7 @@ const ProfileRight = () => {
                 <>
                   <div className="rightbarFollowing">
             <img
-              src={user.profilePicture}
+              src={PF+user.profilePicture}
               alt=""
               className="rightbarFollowingImg"
             />
