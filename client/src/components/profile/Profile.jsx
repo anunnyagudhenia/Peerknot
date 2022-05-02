@@ -3,9 +3,12 @@ import Topbar from "../../components/topbar/Topbar";
 import Feed from "../../components/feed/Feed";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Rightbar from "../../components/rightbar/Rightbar";
+import { User1, Users } from "../../dummyData";
 import "./profile.css";
 
 function Profile() {
+
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <>
       <Topbar />
@@ -15,18 +18,18 @@ function Profile() {
           <div className="profileRightTop">
             <div className="profileCove">
               <img
-                src="assets/person/11.jpg"
+                src={`${PF}post/3.jpg`}
                 alt=""
                 className="profileCoverImg"
               />
               <img
-                src="assets/person/7.jpeg"
+                src={`${PF}person/7.jpeg`}
                 alt=""
                 className="profileUserImg"
               />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">Jayesh</h4>
+              <h4 className="profileInfoName">{User1.username}</h4>
               <span className="profileInfoDesc">Welcome</span>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import "./rightbar.css";
-import HomeRight from "./HomeRight";
+// import HomeRight from "./HomeRight";
 import ProfileRight from "./ProfileRight";
 
 function Rightbar() {

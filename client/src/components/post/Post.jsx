@@ -1,11 +1,13 @@
 import "./post.css";
 import { useState } from "react";
-import {Users} from "../../dummyData";
+// import {Users} from "../../dummyData";
 import { MoreVert } from "@material-ui/icons";
 
 function Post({ post }) {
   const [like,setLike] = useState(post.like)
   const [isLiked,setIsLiked] = useState(false)
+
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   function likeHandler(){
     if(isLiked===true){
@@ -22,17 +24,18 @@ function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img src={post.photo} className="postProfileImg" />
+            <img src={PF+post.profilePicture} className="postProfileImg" alt=""/>
             <span className="postUsername">{post.name}</span>
             <span className="postDate">{post.date}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />
           </div>
+        
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img className="postImg" src={post.photo} alt="" />
+          <img className="postImg" src={PF+post.photo} alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
