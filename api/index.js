@@ -12,7 +12,7 @@ const db=require('mongoose');
 
 dotenv.config();
 
-mongoose.connect(process.env.mongo_url,{useNewUrlParser: true, useUnifiedTopology: true},()=>{
+mongoose.connect("mongodb://localhost:27017/peerknotdb", {useNewUrlParser: true, useUnifiedTopology: true},()=>{
     console.log("connected to mongo db");
 })
 
@@ -21,12 +21,11 @@ app.use(express.json())
 app.use(helmet());
 app.use(morgan("common"));
 
-
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
-app.use("/api/posts", authRoute);
+app.use("/api/posts", postRoute);
 
 
-app.listen(8800, ()=>{
+app.listen(3000, ()=>{
     console.log("Server running at 3000");
 })
