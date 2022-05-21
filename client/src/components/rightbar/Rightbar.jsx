@@ -1,12 +1,11 @@
 import "./rightbar.css";
-// import HomeRight from "./HomeRight";
-import ProfileRight from "./ProfileRight";
+import HomeRight from "./HomeRight";
 
 function Rightbar() {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        <ProfileRight />
+        <HomeRight />
       </div>
     </div>
   );

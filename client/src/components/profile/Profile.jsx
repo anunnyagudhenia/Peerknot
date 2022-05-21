@@ -5,6 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Rightbar from "../../components/rightbar/Rightbar";
 import { User1, Users } from "../../dummyData";
 import "./profile.css";
+import ProfileRight from "../rightbar/ProfileRight";
 
 function Profile() {
 
@@ -35,7 +36,7 @@ function Profile() {
           </div>
           <div className="profileRightBottom">
             <Feed />
-            <Rightbar/>
+            <ProfileRight/>
           </div>
         </div>
       </div>
